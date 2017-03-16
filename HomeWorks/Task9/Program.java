@@ -17,13 +17,19 @@ class Program {
 		}
 
 		for (int i = 0; i < n; i++) {
-			int sum = 0;
-			num++;
-
-			for (int j = 0; j < n; j++) {
-				sum += a[i][j];
+			for (int j = 0; j < m; j++) {
+				if (i == j)
+				   a[i][j] = 0;
 			}
-			System.out.println("Sum of "+ num + " line = "+ sum);
 		}
+
+			for(int i = 0; i < n; i++){
+				for( int j = 0; j < n; j++) {
+					System.out.println(a[i][j]);
+					
+
+				}
+			}
+		
 	}
 }

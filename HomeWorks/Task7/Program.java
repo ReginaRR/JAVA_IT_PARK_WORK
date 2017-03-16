@@ -4,19 +4,26 @@ class Program {
 		Scanner scanner = new Scanner(System.in);
 
 		int n = scanner.nextInt();
-		int a[] = new int[n];
-		int kol = 0;
+		int m = scanner.nextInt();
+		int a[][] = new int[n][m];
+		num = 0;
+		
 
 		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				a[i][j] = scanner.nextInt();
 
-			a[i] = scanner.nextInt();
+			}
 		}
 
-		for (int i = 1; i < n - 1; i++) {
-
-			if ((a[i] > a [i-1]) && (a[i] < a[i+1])) {
-				kol++;
+		for (int i = 0; i < n; i++) {
+			int sum = 0;
+			num++;
+			
+			for (int j = 0; j < n; j++) {
+				sum += a[i][j];
 			}
+			System.out.println("Sum of"+ num + "line = "+ sum)
 		}
 		System.out.println(kol);
 	}
