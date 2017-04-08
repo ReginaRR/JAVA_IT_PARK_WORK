@@ -12,7 +12,7 @@ public class Main {
     }
     public static int intFromChar (char c) {
         if (c == '9') {
-            return 9;
+            return c - '0';
         }
         return 0;
     }
