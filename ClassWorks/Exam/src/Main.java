@@ -1,6 +1,4 @@
-/**
- * Created by Student8 on 08.04.2017.
- */
+import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,6 +22,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             System.out.printf("arr[i]" + "  ");
         }
+        System.out.println("Hello");
 
     }
 }
