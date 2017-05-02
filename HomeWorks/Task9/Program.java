@@ -6,8 +6,6 @@ class Program {
 		int n = scanner.nextInt();
 		int m = scanner.nextInt();
 		int a[][] = new int[n][m];
-		int num = 0;
-		
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
@@ -17,19 +15,12 @@ class Program {
 		}
 
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				if (i == j)
-				   a[i][j] = 0;
+			int sum = 0;
+			for (int j = 0; j < n; j++) {
+				sum += a[i][j];
 			}
+			System.out.println("Sum of"+ i+1 + "line = "+ sum)
 		}
-
-			for(int i = 0; i < n; i++){
-				for( int j = 0; j < n; j++) {
-					System.out.println(a[i][j]);
-					
-
-				}
-			}
-		
+		System.out.println(kol);
 	}
 }
