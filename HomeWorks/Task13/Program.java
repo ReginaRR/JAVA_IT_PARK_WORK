@@ -1,49 +1,37 @@
 import java.util.Scanner;
-import java.util.Random;
 class Program {
-	int n, m;
-	public static void Output(int n, int m, int arr[][]) {
-		
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				System.out.printf ("%3d", arr[i][j]);
-			}
-			System.out.printf ("\n");
-		}
-		System.out.println();
-
-	}
-	
-	public static void Sum(int n, int m, int arr[][]) {
-		
-		for(int i = 0; i < n; i++) {
-			int sum = 0;
-			for( int j = 0; j < m; j++) {
-				sum += arr[i][j]	;	
-			}
-			System.out.println("Sum in "+ (i+1) + " line = " + sum)	;
-		}
-
-	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Random random = new Random();
 		
-		int x = scanner.nextInt();
-		int y = scanner.nextInt();
-		int a[][] = new int[x][x];
+		int n= scanner.nextInt();
+		int m = scanner.nextInt();
+		int a[][] = new int[n][m];
 		
 
-		for (int i = 0; i < x; i++) {
-			for (int j = 0; j < x; j++) {
-				a[i][j] = random.nextInt(99);
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				a[i][j] = scanner.nextInt();
 			}
 		}
 		
-		Output(x, y, a);
-		Sum(x, x, a);
-
+		
+		int max[] = Max(a, n, m);
+		for(int j = 0; j < n; j++) {
+			System.out.println("max in " + (j+1) + " column = " + max[j]);
+		}
 			
     }
+    public static int[] Max (int a[][], int n, int m) {
+			int arr[] = new int[n];
+			for (int j = 0; j < n; j++) {
+				arr[j] = a[0][j];
+				for(int i = 1; i < m; i++) {
+				    if(a[i][j] > arr[j]) {
+				    	arr[j] = a[i][j];
+				    }
+			    }
+		    }   
+		    return arr;
+	    }
 
 }
