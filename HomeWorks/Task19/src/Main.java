@@ -1,5 +1,6 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,13 +11,12 @@ public class Main {
         Byke byke1 = new Byke("12D");
         Byke byke2 = new Byke("14S");
 
-        Transport transport[] = {motorcycle1, motorcycle2, car1, car2, byke1, byke2};
         ParkingPlace place = new ParkingPlace();
         place.Parking(car1);
         place.Parking(motorcycle1);
         place.Parking(byke2);
-        place.Show();
-        place.Unparking(car1);
-        place.Show();
+
+        place.Unparking("WE23");
+
     }
 }

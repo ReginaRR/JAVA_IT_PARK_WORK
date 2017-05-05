@@ -1,10 +1,9 @@
 abstract class Transport {
-    protected String number;
+    private String number;
     Transport (String number) {
         this.number = number;
     }
     public String getNumber() {
         return number;
     }
-
 }

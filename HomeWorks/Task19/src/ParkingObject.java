@@ -1,3 +1,5 @@
 public interface ParkingObject {
-    public void ParkingObject();
+    void goToPark();
+    void goFromPark();
+    String getNumber1();
 }
