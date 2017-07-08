@@ -1,8 +1,15 @@
 package models;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "costs")
 public class Cost {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private char[] cost = new char[100];
+    @Column
     private int user_id;
 
     public int getId() {
